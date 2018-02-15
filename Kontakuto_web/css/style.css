@@ -57,7 +57,9 @@ section article{
 /*Media Queries*/
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
-
+    section article{
+    width: 30%;
+}
 }
 
 /* Landscape tablets and medium desktops */
@@ -72,10 +74,23 @@ section article{
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-
+section article{
+    margin: 10px 0;
+    width: 92%;
+}
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
+section article{
+    margin: 10px 0;
+    width: 87%;
+}
+}
 
+/* Portrait small phones and smaller */
+@media (max-width: 320px) {
+    header div span{
+        display: none;
+    }
 }
