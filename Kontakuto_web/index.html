@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="kontakuto" ng-controller="showing_contacts">
 <head>
 	<!-- meta -->
 	<meta charset="utf-8">
@@ -9,6 +9,9 @@
 	
 	<!-- css -->
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+	
+	<!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	
 	<!-- Javascript-->
 	<script type="text/javascript" src="js/javascript.js"></script>
@@ -30,23 +33,22 @@
                 <li><button>+</button></li>
             </ul>
         </nav>
-		<section>
-			<article>
-                <span>Oscar Garcia</span>
-                <div>
+		<section ng-modle="list_of_contacts">
+			<article ng-repeat="contact in contacts" ng-click="show_details(contact.id)">
+                <span>{{contact.name}}</span>
+                <div class="contact_buttons">
                     <button>e</button>
                     <button>d</button>
                 </div>
-            </article>
-            <article>
-                <span>Marc Fors</span>
-                <div>
-                    <button>e</button>
-                    <button>d</button>
+                <div class="contact_details">
+                    <hr>
+                    Name: {{contact.name}}<br>
+                    Phone: {{contact.phone}}<br>
+                    Email: {{contact.email}}<br>
+                    <input type="button" value="x" ng-click="hide_details(contact.id)">
                 </div>
             </article>
 		</section>
 		<footer></footer>
 	</body>
 </html>
- 
