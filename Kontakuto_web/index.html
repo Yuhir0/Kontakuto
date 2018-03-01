@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html ng-app="kontakuto" ng-controller="showing_contacts">
-<head>
-	<!-- meta -->
-	<meta charset="utf-8">
-	<meta name="description" content="Exercicis Javascript" />
-	<meta name="author" content="Oscar Garcia" />
-	<meta name="contacts" content="contacts">
-	
-	<!-- css -->
-	<link rel="stylesheet" href="css/style.css" type="text/css">
-	
-	<!-- AngularJS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-	
-	<!-- Javascript-->
-	<script type="text/javascript" src="js/javascript.js"></script>
-	
-	<!-- favicon -->
-	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-	<title>Javascript - Oscar Garcia</title>
-</head>
+    <head>
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta name="description" content="Exercicis Javascript" />
+        <meta name="author" content="Oscar Garcia" />
+        <meta name="contacts" content="contacts">
+
+        <!-- css -->
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+
+        <!-- AngularJS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+        <!-- Javascript-->
+        <script type="text/javascript" src="js/javascript.js"></script>
+
+        <!-- favicon -->
+        <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+        <title>Javascript - Oscar Garcia</title>
+    </head>
 	<body>
 		<header>
             <h1>Kontakuto</h1>
@@ -34,12 +34,13 @@
             </ul>
         </nav>
 		<section ng-modle="list_of_contacts">
-			<article ng-repeat="contact in contacts" ng-click="show_details(contact.id)">
-                <span>{{contact.name}}</span>
+            
+			<article ng-repeat="contact in contacts">
                 <div class="contact_buttons">
                     <button>e</button>
                     <button>d</button>
                 </div>
+                <div ng-click="show_details(contact.id)">{{contact.name}}</div>
                 <div class="contact_details">
                     <hr>
                     Name: {{contact.name}}<br>
