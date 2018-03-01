@@ -24,7 +24,6 @@ nav ul{
 section article{
     margin: 10px 20px;
     border: 1px solid black;
-    padding: 20px;
     width: 45%;
 }
 
@@ -33,8 +32,11 @@ section article{
         display: block;
     }
 
-    select article span{
+    select article div:nth-child(2){
         float: left;
+        padding: 20px;
+        height: 100%;
+        width: 100%;
     }
 
     section article div.contact_buttons{
