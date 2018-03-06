@@ -4,6 +4,17 @@ var Contact = function(id, name, phone, email){
     this.phone = phone;
     this.email = email;
 }
+function check(element, limit){
+    var a = document.getElementById(element).value;
+    console.log(a)
+    if (a.length > limit){
+        document.getElementById("message_"+element).innerHTML ="<span style = \"color: red;\">Maximum "+element+" length is " + limit + " </span>";
+        return false;
+        }else{
+        document.getElementById("message_"+element).innerHTML ="";
+        return true;
+        }
+}
 var kontakuto = angular.module('kontakuto',[]);
 kontakuto.controller('showing_contacts', function ($scope) {
     $scope.contacts = [new Contact(0,"Oscar","666666666","oscar@gmail.com"),

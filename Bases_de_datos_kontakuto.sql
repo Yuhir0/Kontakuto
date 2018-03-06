@@ -12,6 +12,7 @@ create table kontakuto.contacts (
     id_user smallint unsigned,
     num_phone1 varchar(15) default null,
     num_phone2 varchar(15) default null,
+    num_phone2 varchar(15) default null,
     num_phone3 varchar(15) default null,
     email1 varchar(40) default null,
     email2 varchar(40) default null,

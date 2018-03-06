@@ -39,31 +39,34 @@
                 <input type="file" name="image" id="image">
                 
                 <div class="question">
-					<input type="text" name="name" id="name" placeholder="Name">
+					<input type="text" name="name" id="name" placeholder="Name" onblur="check('name',20);">
 					<div class="error" id="message_name"></div>
 				</div>
                	<div class="question">
-					<input type="text" name="lastname" id="lastname" placeholder="Lastname">
+					<input type="text" name="lastname" id="lastname" placeholder="Lastname" onblur="check('lastname',20);">
 					<div class="error" id="message_lastname"></div>
 				</div>
             </article>
             <article>
                 <div class="question">
-					<input type="text" name="phone" id="phone" placeholder="Phone"><button>+</button>
+					<input type="text" name="phone" id="phone" placeholder="Phone" onblur="check('phone',15);"><button>+</button> 
 					<div class="error" id="message_phone"></div>
 				</div>
                <div class="question">
-					<input type="email" name="email" id="mail" placeholder="Email"><button>+</button>
+					<input type="email" name="email" id="email" placeholder="Email" onblur="check('email',40);"><button>+</button>
 					<div class="error" id="message_email"></div>
 				</div>
                <div class="question">
-                <input type="text" name="social1" id="social1" placeholder="Facebook Adress">
+                <input type="text" name="social1" id="facebook" placeholder="Facebook Adress" onblur="check('facebook',40);">
+                <div class="error" id="message_facebook"></div>
                 </div>
                 <div class="question">
-                <input type="text" name="social2" id="social2" placeholder="Twitter Adress">
+                <input type="text" name="social2" id="twitter" placeholder="Twitter Adress" onblur="check('twitter',40);">
+                <div class="error" id="message_twitter"></div>
                 </div>
                 <div class="question">
-                <input type="text" name="social3" id="social3" placeholder="Instagram Adrres">
+                <input type="text" name="social3" id="instagram" placeholder="Instagram Adrres" onblur="check('instagram',40);">
+                <div class="error" id="message_instagram"></div>
                 </div>
                 
             </article>
