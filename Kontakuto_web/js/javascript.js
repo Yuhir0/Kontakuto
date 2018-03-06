@@ -17,7 +17,6 @@ kontakuto.controller('showing_contacts', function ($scope) {
         contacts[pos].style.display='block';
     };
     $scope.hide_details = function(pos){
-        console.log(pos);
         contact = document.getElementsByClassName('contact_details')
         [pos]
         contact.style.display='none';
