@@ -28,22 +28,44 @@
         </header>
         <nav>
             <ul>
-                <li>Save</li>
-                <li>Save &amp; Exit</li>
-                <li>Cancel</li>
+                <li><a href="#"onclick="add()">Save</a></li>
+                <li><a href="index.html" onclick="add()">Save &amp; Exit</a></li>
+                <li><a href="index.html">Cancel</a></li>
             </ul>
         </nav>
 		<section>
 			<article>
                 <img src="#" alt="Imagen">
                 <input type="file" name="image" id="image">
-                <input type="text" name="name" id="name" placeholder="Name">
-                <input type="text" name="lastname" id="lastname" placeholder="Lastname">
+                
+                <div class="question">
+					<input type="text" name="name" id="name" placeholder="Name">
+					<div class="error" id="message_name"></div>
+				</div>
+               	<div class="question">
+					<input type="text" name="lastname" id="lastname" placeholder="Lastname">
+					<div class="error" id="message_lastname"></div>
+				</div>
             </article>
             <article>
-                <input type="text" name="phone" id="phone" placeholder="Phone"><button>+</button>
-                <input type="email" name="mail" id="mail" placeholder="Mail"><button>+</button>
-                <span>Social media</span><input type="" name="description" id="description" placeholder="Description">
+                <div class="question">
+					<input type="text" name="phone" id="phone" placeholder="Phone"><button>+</button>
+					<div class="error" id="message_phone"></div>
+				</div>
+               <div class="question">
+					<input type="email" name="email" id="mail" placeholder="Email"><button>+</button>
+					<div class="error" id="message_email"></div>
+				</div>
+               <div class="question">
+                <input type="text" name="social1" id="social1" placeholder="Facebook Adress">
+                </div>
+                <div class="question">
+                <input type="text" name="social2" id="social2" placeholder="Twitter Adress">
+                </div>
+                <div class="question">
+                <input type="text" name="social3" id="social3" placeholder="Instagram Adrres">
+                </div>
+                
             </article>
 		</section>
 		<footer></footer>
