@@ -11,8 +11,12 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="css/contact.css" type="text/css">
 	
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
 	<!-- Javascript-->
-	<script type="text/javascript" src="js/javascript.js"></script>
+	<script type="text/javascript" src="js/validator.js"></script>
+	
 	
 	<!-- favicon -->
 	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
@@ -28,12 +32,13 @@
         </header>
         <nav>
             <ul>
-                <li><a href="#"onclick="add()">Save</a></li>
-                <li><a href="index.html" onclick="add()">Save &amp; Exit</a></li>
+                <li><a href="#"onclick="final_check()">Save</a></li>
+                <li><a href="index.html" onclick="final_check()">Save &amp; Exit</a></li>
                 <li><a href="index.html">Cancel</a></li>
             </ul>
         </nav>
 		<section>
+            <div id="error"></div>
 			<article>
                 <img src="#" alt="Imagen">
                 <input type="file" name="image" id="image">
@@ -68,6 +73,7 @@
                 <input type="text" name="social3" id="instagram" placeholder="Instagram Adrres" onblur="check('instagram',40);">
                 <div class="error" id="message_instagram"></div>
                 </div>
+                
                 
             </article>
 		</section>
