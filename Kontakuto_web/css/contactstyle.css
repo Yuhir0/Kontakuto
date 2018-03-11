@@ -47,6 +47,30 @@ nav ul {
     text-align: center;
 }
 
+div#q1.question::before {
+    content: "Name: ";
+}
+
+div#q3.question::before {
+    content: "Phone: ";
+}
+
+div#q4.question::before {
+    content: "Email: ";
+}
+
+div#q5.question::before {
+    content: "Facebook: ";
+}
+
+div#q6.question::before {
+    content: "Twitter: ";
+}
+
+div#q7.question::before {
+    content: "Instagram: ";
+}
+
 html {
     font-family: "Open Sans";
 }
@@ -54,6 +78,13 @@ html {
 div {
     color: #613B3B;
     font-weight: bold;
+}
+
+input#phone {
+}
+
+div#q2.question::before {
+    content: "Lastname: ";
 }
 
 nav ul li {
@@ -67,7 +98,7 @@ section article {
     margin: 10px 20px;
     border-style:groove;
     padding: 20px 0px 20px 20px;
-    margin-right: 55%;
+    margin-right: 50%;
     
 }
 
@@ -172,7 +203,7 @@ section article div.contact_details {
 @media (max-width: 767px) {
     section article {
         margin: 10px 0;
-        margin-right: 25%;
+        margin-right: 22%;
     }
 }
 
@@ -180,7 +211,7 @@ section article div.contact_details {
 @media (max-width: 480px) {
     section article {
         margin: 10px 0;
-        width: 70%
+        width: 75%
 
     }
 }

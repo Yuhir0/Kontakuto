@@ -65,10 +65,9 @@ nav ul li {
 
 section article {
     margin: 10px 20px;
+    margin-right: 50%;
     border-style:groove;
     padding: 20px 0px 20px 20px;
-    margin-right: 55%;
-    
 }
 
 section article:hover {
@@ -78,27 +77,6 @@ section article:hover {
 
 .question {
     margin: 7px;
-}
-
-section article div.contact_buttons {
-    float: right;
-    display: none;
-}
-
-section article:hover div.contact_buttons {
-    display: block;
-}
-
-section article div.contact_buttons button:nth-child(1) {
-    margin-right: 20px;
-}
-
-section article div.contact_buttons button:hover {
-    cursor: pointer;
-}
-
-section article div.contact_details {
-    display: none;
 }
 
 .nav {
@@ -152,6 +130,35 @@ section article div.contact_details {
     display: block;
 }
 
+
+div#q1.question::before {
+    content: "Name: ";
+}
+
+div#q2.question::before {
+    content: "Lastname: ";
+}
+
+div#q3.question::before {
+    content: "Phone: ";
+}
+
+div#q4.question::before {
+    content: "Email: ";
+}
+
+div#q5.question::before {
+    content: "Facebook: ";
+}
+
+div#q6.question::before {
+    content: "Twitter: ";
+}
+
+div#q7.question::before {
+    content: "Instagram: ";
+}
+
 /*Media Queries*/
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
@@ -172,7 +179,7 @@ section article div.contact_details {
 @media (max-width: 767px) {
     section article {
         margin: 10px 0;
-        margin-right: 25%;
+        margin-right: 22%;
     }
 }
 
@@ -180,7 +187,7 @@ section article div.contact_details {
 @media (max-width: 480px) {
     section article {
         margin: 10px 0;
-        width: 70%
+        width: 75%
 
     }
 }

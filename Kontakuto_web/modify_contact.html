@@ -6,10 +6,14 @@
 	<meta name="description" content="Exercicis Javascript" />
 	<meta name="author" content="Oscar Garcia" />
 	<meta name="contacts" content="contacts">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<!-- css -->
-	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="stylesheet" href="css/contact.css" type="text/css">
+	<link rel="stylesheet" href="css/modifystyle.css" type="text/css">
 	
 	<!-- Javascript-->
 	<script type="text/javascript" src="js/javascript.js"></script>
@@ -19,31 +23,66 @@
 	<title>Javascript - Oscar Garcia</title>
 </head>
 	<body>
-		<header>
-            <h1>Kontakuto</h1>
-            <div>
-                <span>username</span>
-                <button>*</button>
-            </div>
-        </header>
+	        <ul class="nav">
+	
+	<div class="logo">
+	    <a href="a">Kontakuto</a>
+    </div>
+    
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="add_contact.html">ADD CONTACT</a></li>
+        <li><a href="a">OTHERS</a></li>
+        <li><a href="a">username</a></li>
+        <li><a href="a"><button>*</button></a></li>
+    </ul>
+	
+    <div class="banner">
+        <img class="banner-image" src="img/banner.jpg">
+    </div>
         <nav>
             <ul>
-                <li>Save</li>
-                <li>Save &amp; Exit</li>
-                <li>Cancel</li>
+                <li><a href="#"onclick="add()">Save</a></li>
+                <li><a href="index.html" onclick="add()">Save &amp; Exit</a></li>
+                <li><a href="index.html">Cancel</a></li>
             </ul>
         </nav>
 		<section>
 			<article>
                 <img src="#" alt="Imagen">
                 <input type="file" name="image" id="image">
-                <input type="text" name="name" id="name" placeholder="Name">
-                <input type="text" name="lastname" id="lastname" placeholder="Lastname">
+                
+                <div class="question" id="q1">
+					<input type="text" name="name" id="name" placeholder="Name" onblur="check('name',20);">
+					<div class="error" id="message_name"></div>
+				</div>
+               	<div class="question" id="q2">
+					<input type="text" name="lastname" id="lastname" placeholder="Lastname" onblur="check('lastname',20);">
+					<div class="error" id="message_lastname"></div>
+				</div>
             </article>
             <article>
-                <input type="text" name="phone" id="phone" placeholder="Phone"><button>+</button>
-                <input type="email" name="mail" id="mail" placeholder="Mail"><button>+</button>
-                <span>Social media</span><input type="" name="description" id="description" placeholder="Description">
+               <div class="question" id="q3">
+					<input type="text" name="phone" id="phone" placeholder="Phone" onblur="check('phone',15);"><button>+</button> 
+					<div class="error" id="message_phone"></div>
+				</div>
+                
+                <div class="question" id="q4">
+					<input type="email" name="email" id="email" placeholder="Email" onblur="check('email',40);"><button>+</button>
+					<div class="error" id="message_email"></div>
+				</div>
+               <div class="question" id="q5">
+                <input type="text" name="social1" id="facebook" placeholder="Facebook Adress" onblur="check('facebook',40);">
+                <div class="error" id="message_facebook"></div>
+                </div>
+                <div class="question" id="q6">
+                <input type="text" name="social2" id="twitter" placeholder="Twitter Adress" onblur="check('twitter',40);">
+                <div class="error" id="message_twitter"></div>
+                </div>
+                <div class="question" id="q7">
+               <input type="text" name="social3" id="instagram" placeholder="Instagram Adrres" onblur="check('instagram',40);">
+                <div class="error" id="message_instagram"></div>
+                </div>
+
             </article>
 		</section>
 		<footer></footer>
