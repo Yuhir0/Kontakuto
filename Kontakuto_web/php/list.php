@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/library.php';
 
-$task = new Task();
+$contact = new Contact();
 
-echo $task->Read();
+echo $contact->Read();
 ?>

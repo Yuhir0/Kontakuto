@@ -36,7 +36,7 @@ class Task
         $query->bindParam("description", $description, PDO::PARAM_STR);
         $query->execute();
 
-        return json_encode(['task' => [
+        return json_encode(['contacts' => [
             'id'          => $this->db->lastInsertId(),
             'name'        => $name,
             'description' => $description
@@ -57,7 +57,7 @@ class Task
             $data[] = $row;
         }
 
-        return json_encode(['tasks' => $data]);
+        return json_encode(['contacts' => $data]);
     }
 
 

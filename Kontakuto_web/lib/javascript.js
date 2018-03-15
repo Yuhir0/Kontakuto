@@ -1,6 +1,6 @@
 var app = angular.module('kontakuto', []);
 
-app.controller('contacts_controller', ['$scope', '$http', function ($scope, $http) {
+app.controller('ContactsController', ['$scope', '$http', function ($scope, $http) {
 
     // List of contact
     $scope.contacts = [];
@@ -36,7 +36,7 @@ app.controller('contacts_controller', ['$scope', '$http', function ($scope, $htt
 
                 $scope.contacts.push(e.data.contact);
 
-                var modal_element = angular.element('#add_new_contact_modal');
+                var modal_element = angular.element('#add_new_task_modal');
                 modal_element.modal('hide');
 
             }, function error(e) {
@@ -47,7 +47,7 @@ app.controller('contacts_controller', ['$scope', '$http', function ($scope, $htt
     // open edit contact details popup
     $scope.edit = function (index) {
         $scope.contact_details = $scope.contacts[index];
-        var modal_element = angular.element('#modal_update_contact');
+        var modal_element = angular.element('#modal_update_task');
         modal_element.modal('show');
     };
 
@@ -61,7 +61,7 @@ app.controller('contacts_controller', ['$scope', '$http', function ($scope, $htt
             
                 $scope.errors = [];
 
-                var modal_element = angular.element('#modal_update_contact');
+                var modal_element = angular.element('#modal_update_task');
                 modal_element.modal('hide');
 
             }, function error(e) {
