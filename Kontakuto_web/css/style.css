@@ -40,13 +40,6 @@ header div button {
     font-size: 1em;
 }
 
-nav ul {
-    list-style: none;
-    float: right;
-    font-size: 0.7em;
-    text-align: center;
-}
-
 html {
     font-family: "Open Sans";
 }
@@ -86,6 +79,8 @@ section article div.contact_buttons {
 }
 
 section article:hover div.contact_buttons {
+    position: fixed;
+    left: 34%;
     display: block;
 }
 
@@ -100,6 +95,25 @@ section article div.contact_buttons button:hover {
 section article div.contact_details {
     display: none;
 }
+
+.contact_details input {
+    position: relative;
+    left: 85%;
+    top: 5%;
+	background : url("quit.png") no-repeat center center;
+    background-size: contain;
+    width : 25px;
+	height :25px;
+    border-radius: 50%;
+    border : none;
+	color : transparent;
+	font-size : 0;
+    box-shadow: 0 7px 15px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.contact_details input:hover {
+    opacity: 0.8;
+    }
 
 .nav {
     list-style: none;
