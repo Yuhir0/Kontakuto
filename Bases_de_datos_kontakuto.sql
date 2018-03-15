@@ -1,30 +1,26 @@
-create database kontakuto charset utf16; 
+CREATE DATABASE kontakuto charset utf16; 
 
-create table kontakuto.users (
-    id_user smallint unsigned auto_increment default '0' primary key,
-    name varchar(30) default Null,
-    `password` varchar(30) not null,
-    first_login timestamp,
-    email varchar(35) default Null);
+CREATE TABLE kontakuto.users (
+    id_user SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(35) DEFAULT NULL UNIQUE,
+    name VARCHAR(30) DEFAULT NULL,
+    `password` VARCHAR(30) NOT NULL,
+    first_login TIMESTAMP);
     
-create table kontakuto.contacts (
-    id_contact smallint unsigned auto_increment default '0',
-    id_user smallint unsigned,
-    num_phone1 varchar(15) default null,
-    num_phone2 varchar(15) default null,
-    num_phone2 varchar(15) default null,
-    num_phone3 varchar(15) default null,
-    email1 varchar(40) default null,
-    email2 varchar(40) default null,
-    email3 varchar(40) default null,
-    facebook varchar(20) default null,
-    twitter varchar(20) default null,
-    instagram varchar(20) default null,
-    github varchar(20) default null,
-    street varchar(100) default null,
-    num_hall tinyint unsigned default null,
-    num_flat tinyint default null,
-    postal_code smallint unsigned default null,
-    description text default null,
-    primary key (id_contact,id_user),
-    foreign key (id_user) REFERENCES kontakuto.usuarios (id_user)); 
+CREATE TABLE kontakuto.contacts (
+    id_contact SMALLINT UNSIGNED AUTO_INCREMENT,
+    id_user SMALLINT UNSIGNED,
+    contact_name VARCHAR(20) DEFAULT NULL,
+    phone VARCHAR(15) DEFAULT NULL,
+    email VARCHAR(40) DEFAULT NULL,
+    facebook VARCHAR(20) DEFAULT NULL,
+    twitter VARCHAR(20) DEFAULT NULL,
+    instagram VARCHAR(20) DEFAULT NULL,
+    github VARCHAR(20) DEFAULT NULL,
+    street VARCHAR(100) DEFAULT NULL,
+    num_hall tinyint UNSIGNED DEFAULT NULL,
+    num_flat tinyint DEFAULT NULL,
+    postal_code SMALLINT UNSIGNED DEFAULT NULL,
+    description TEXT DEFAULT NULL,
+    PRIMARY KEY (id_contact,id_user),
+    FOREIGN KEY (id_user) REFERENCES kontakuto.users (id_user));
