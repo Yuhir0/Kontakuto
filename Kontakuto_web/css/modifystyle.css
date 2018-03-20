@@ -42,9 +42,34 @@ header div button {
 
 nav ul {
     list-style: none;
-    float: right;
+    position: fixed;
+    right: 37%;
     font-size: 0.7em;
     text-align: center;
+}
+
+div#q1.question::before {
+    content: "Name: ";
+}
+
+div#q3.question::before {
+    content: "Phone: ";
+}
+
+div#q4.question::before {
+    content: "Email: ";
+}
+
+div#q5.question::before {
+    content: "Facebook: ";
+}
+
+div#q6.question::before {
+    content: "Twitter: ";
+}
+
+div#q7.question::before {
+    content: "Instagram: ";
 }
 
 html {
@@ -56,6 +81,13 @@ div {
     font-weight: bold;
 }
 
+input#phone {
+}
+
+div#q2.question::before {
+    content: "Lastname: ";
+}
+
 nav ul li {
     margin: 3px 30px;
     border: 1px solid black;
@@ -65,9 +97,18 @@ nav ul li {
 
 section article {
     margin: 10px 20px;
-    margin-right: 50%;
     border-style:groove;
     padding: 20px 0px 20px 20px;
+    margin-right: 50%;
+    
+}
+
+article > img {
+    font-size: 12px;
+}
+
+#image {
+    font-size: 12px;
 }
 
 section article:hover {
@@ -77,6 +118,27 @@ section article:hover {
 
 .question {
     margin: 7px;
+}
+
+section article div.contact_buttons {
+    float: right;
+    display: none;
+}
+
+section article:hover div.contact_buttons {
+    display: block;
+}
+
+section article div.contact_buttons button:nth-child(1) {
+    margin-right: 20px;
+}
+
+section article div.contact_buttons button:hover {
+    cursor: pointer;
+}
+
+section article div.contact_details {
+    display: none;
 }
 
 .nav {
@@ -120,40 +182,18 @@ section article:hover {
     display: block;
 }
 
-
-div#q1.question::before {
-    content: "Name: ";
-}
-
-div#q2.question::before {
-    content: "Lastname: ";
-}
-
-div#q3.question::before {
-    content: "Phone: ";
-}
-
-div#q4.question::before {
-    content: "Email: ";
-}
-
-div#q5.question::before {
-    content: "Facebook: ";
-}
-
-div#q6.question::before {
-    content: "Twitter: ";
-}
-
-div#q7.question::before {
-    content: "Instagram: ";
-}
-
 /*Media Queries*/
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
     section article {
-        margin-right: 60%;
+        margin-right: 65%;
+    }
+    nav ul {
+    list-style: none;
+    position: fixed;
+    right: 57%;
+    font-size: 0.7em;
+    text-align: center;
     }
 }
 

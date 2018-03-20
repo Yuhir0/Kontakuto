@@ -82,6 +82,7 @@ section article:hover div.contact_buttons {
     position: fixed;
     left: 34%;
     display: block;
+    
 }
 
 section article div.contact_buttons button:nth-child(1) {
