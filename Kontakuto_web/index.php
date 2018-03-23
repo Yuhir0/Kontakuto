@@ -4,7 +4,7 @@
         <!-- meta -->
         <meta charset="utf-8">
         <meta name="description" content="Exercicis Javascript" />
-        <meta name="author" content="Oscar Garcia" />
+        <meta name="author" content="Kontakuto" />
         <meta name="contacts" content="contacts">
         
         <title>Kontakuto</title>
